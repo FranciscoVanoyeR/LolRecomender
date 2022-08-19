@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Recomendaciones{% endblock %}
+
+{% block content %}
+
+  <div class="grid-champ"> 
+    <div>
+      <img id="campeon_img" src={{url_for('static', filename = "img/" + campeon + ".jpg")}}>
+      <h3> {{ campeon }} </h3>
+      <p class="item_nombre">{{ get_role(campeon) }}</p>
+    </div>
+
+    <div>
+    <h1>Estadísticas base</h1>
+    <div class="grid-stat">
+      {% for stat in stats%}
+        <div>
+          <p class="stat_nombre"> {{ stat[0] }} </p>
+          <p class="stat_valor"> {{ stat[1] }} </p>
+        </div>
+      {%endfor%}
+    </div>
+    </div>
+  </div><br><br>
+
+
+{% include "campeones_similares.html" %}
+<hr><br><br>
+
+{% include "form_stat.html" %}
+
+{% include "form_choose.html" %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!doctype html>
+
+<title>{% block title %}{% endblock %}</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;1,300&display=swap" rel="stylesheet"> 
+<link rel="shortcut icon" href="{{ url_for('static', filename='icon.jfif') }}">
+
+{% block content %}{% endblock %}
+
+{% block footer %}
+
+<div class="contenedor-footer">
+    <div class="footer-texto">
+        League of legends es una marca registrada de Riot Games, Inc. League of Legends ©Riot Games, Inc.
+    </div>
+    <div class="footer-texto">
+        <a href="">Trabajo realizado para la materia de Sistemas Inteligentes</a>
+    </div>
+</div>
+
+
+{% endblock footer %}
+
+</section>

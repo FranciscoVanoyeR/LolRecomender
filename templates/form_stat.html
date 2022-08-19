@@ -1,0 +1,32 @@
+<h3 class="cont_titulo">Elige los atributos que quieres en tu campeón</h3>
+
+<form action="" method="post" novalidate>
+{{ form.hidden_tag() }}
+
+  <div class="grid-formstat">
+    {{ form_stat.rol.label }}
+    {{ form_stat.rol }}
+    {{ form_stat.linea.label }}
+    {{ form_stat.linea }}
+    {{ form_stat.tipo.label }}
+    {{ form_stat.tipo }}
+    {{ form_stat.damage.label }}
+    {{ form_stat.damage }}
+    {{ form_stat.toughness.label }}
+    {{ form_stat.toughness }}
+    {{ form_stat.control.label }}
+    {{ form_stat.control }}
+    {{ form_stat.mobility.label }}
+    {{ form_stat.mobility }} 
+    {{ form_stat.utility.label }}
+    {{ form_stat.utility }} 
+    {{ form_stat.difficulty.label }}
+    {{ form_stat.difficulty }}
+  </div>
+
+  <div id="formstat-submit">
+    <span style="color: red;">{{ error }}</span>
+    {{ form_stat.submit_stat() }}
+  </div>
+
+</form>

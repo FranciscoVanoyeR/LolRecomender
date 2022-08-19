@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Recomendaciones{% endblock %}
+
+{% block content %}
+
+  <div class="grid-champ">
+    <div id="campeon_cont">
+      <img style="padding-left: 50px;" id="campeon_img" src={{url_for('static', filename = "img/Custom.jpg")}}>
+    </div>
+
+    <div>
+    <h1 class="titulo">Atributos seleccionados</h1>
+    <div class="grid-stat">
+      {% for k, v in stat.items() %}
+        <div>
+          <p class="stat_nombre">{{k.capitalize() }}</p>
+          <p class="stat_valor">{{v}}</p>
+        </div>
+      {% endfor %} 
+    </div>
+    </div>
+  </div>
+
+
+{% include "campeones_similares.html" %}
+<hr>
+{% include "form_stat.html" %}
+
+{% include "form_choose.html" %}
+
+{% endblock %}

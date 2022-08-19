@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Recomendador de Campeones{% endblock %}
+
+{% block content %}
+
+<div class="cont-logo">
+  <img id="logo" src={{url_for('static', filename = "lol_logo.png")}}>
+</div>
+
+
+{% include "form_stat.html" %}
+
+{% include "form_choose.html" %}
+
+{% endblock %}
